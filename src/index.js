@@ -1,11 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import { config } from "./modules/config";
-// import "./modules/header.component";
-import App from "./App";
-import "./css/styles.css";
-import "./scss/style.scss";
+
+import App from "./modules/App/App";
 
 render(<App />, document.getElementById("app"));
-
-console.log(config);
