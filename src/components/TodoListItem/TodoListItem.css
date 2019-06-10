@@ -1,0 +1,23 @@
+.todo_list_item {
+  display: flex;
+  align-items: center;
+}
+
+.todo_list_item-label {
+  margin-right: auto;
+}
+
+.todo_list_item-delete_icon {
+  padding: 2px;
+  border-width: 1px;
+  border-color: red;
+  border-style: solid;
+  border-radius: 4px;
+  fill: red;
+}
+
+.todo_list_item-delete_icon:hover {
+  fill: white;
+  background-color: red;
+  cursor: pointer;
+}

@@ -1,13 +1,11 @@
 import React from "react";
-import DeleteIcon from "./delete.svg";
+import TodoListItem from "../TodoListItem/TodoListItem";
+import "./TodoList.css";
 
 const TodoList = () => {
   return (
-    <ul>
-      <li>
-        <span>Learn React</span>
-        <DeleteIcon width={20} height={20} />
-      </li>
+    <ul className="todo_list">
+      <TodoListItem />
     </ul>
   );
 };
