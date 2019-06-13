@@ -37,7 +37,16 @@ module.exports = {
         loader: "babel-loader"
       },
       {
-        test: /\.svg$/,
+        test: /^(?!.*\.inline\.svg$).*\.svg$/,
+        loader: "svg-url-loader",
+        options: {
+          limit: 10000,
+          name: "[path][name].[ext]",
+          noquotes: true
+        }
+      },
+      {
+        test: /\.inline.svg$/,
         use: [
           {
             loader: "babel-loader"
@@ -50,6 +59,20 @@ module.exports = {
           }
         ]
       }
+      // {
+      //   test: /\.svg$/,
+      //   use: [
+      //     {
+      //       loader: "babel-loader"
+      //     },
+      //     {
+      //       loader: "react-svg-loader",
+      //       options: {
+      //         jsx: true // true outputs JSX tags
+      //       }
+      //     }
+      //   ]
+      // }
     ]
   }
 };
