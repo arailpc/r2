@@ -1,27 +1,45 @@
 .todo_list_item {
   display: flex;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .todo_list_item-label {
   margin-right: auto;
 }
 
-.todo_list_item-delete_icon {
-  padding: 2px;
-  border-width: 1px;
-  border-color: red;
-  border-style: solid;
+.todo_list_item-button {
+  box-sizing: content-box;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  width: 20px;
+  height: 20px;
+  margin: 0 2px;
+  border: solid 1px red;
   border-radius: 4px;
+  padding: 4px;
+  background-color: white;
+}
+
+.todo_list_item-icon {
   fill: red;
 }
 
-.todo_list_item-delete_icon:hover {
-  fill: white;
+.todo_list_item-button:hover,
+.todo_list_item-button:focus {
   background-color: red;
-  cursor: pointer;
 }
 
-.todo_list_item-important_icon {
-  fill: red;
+.todo_list_item-button:hover .todo_list_item-icon,
+.todo_list_item-button:focus .todo_list_item-icon {
+  fill: white;
+}
+
+.todo_list_item-button:active {
+  transform: translateY(1px);
+}
+
+.todo_list_item-label.todo_list_item-label--important {
+  color: tomato;
 }

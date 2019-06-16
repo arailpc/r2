@@ -1,7 +1,8 @@
 .todo_list {
   margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
+  padding: 5px;
   list-style-type: none;
+
+  border: 1px gray solid;
+  border-radius: 4px;
 }
