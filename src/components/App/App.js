@@ -10,12 +10,17 @@ export default class App extends React.Component {
       { label: "learn React", id: uniqueNumber(), important: true },
       { label: "make awesome app", id: uniqueNumber(), important: false }
     ];
+    this.onClickImportant = id => {
+      const n = this.todos.findIndex(item => id === item.id);
+      this.todos[n].important = true;
+      console.log(this.todos);
+    };
   }
 
   render() {
     return (
       <div className="app">
-        <Todolist todos={this.todos} />
+        <Todolist todos={this.todos} onClickImportant={this.onClickImportant} />
       </div>
     );
   }

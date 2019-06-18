@@ -11,10 +11,15 @@ const TodoListItem = props => {
     <li className="todo_list_item">
       <span className={classNameLabel}>{props.label}</span>
       <button className="todo_list_item-button">
-        <ImportantIcon className="todo_list_item-icon" width={20} height={20} />
+        <ImportantIcon
+          className="todo_list_item-icon"
+          width={15}
+          height={15}
+          onClick={() => props.onClickImportant(props.id)}
+        />
       </button>
       <button className="todo_list_item-button">
-        <DeleteIcon className="todo_list_item-icon" width={20} height={20} />
+        <DeleteIcon className="todo_list_item-icon" width={15} height={15} />
       </button>
     </li>
   );
@@ -22,7 +27,9 @@ const TodoListItem = props => {
 
 TodoListItem.propTypes = {
   label: PropTypes.string,
-  important: PropTypes.bool
+  important: PropTypes.bool,
+  onClickImportant: PropTypes.func,
+  id: PropTypes.number
 };
 
 export default TodoListItem;
