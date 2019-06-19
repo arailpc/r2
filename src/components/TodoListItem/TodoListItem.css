@@ -6,6 +6,8 @@
 
 .todo_list_item-label {
   margin-right: auto;
+  cursor: pointer;
+  user-select: none;
 }
 
 .todo_list_item-button {
@@ -42,4 +44,8 @@
 
 .todo_list_item-label.todo_list_item-label--important {
   color: tomato;
+}
+
+.todo_list_item-label.todo_list_item-label--done {
+  text-decoration: line-through;
 }
